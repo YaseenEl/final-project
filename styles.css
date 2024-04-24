@@ -1,0 +1,395 @@
+header{
+    color: red;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-content: space-between;
+}
+
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+header #changeModes{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    justify-self: end;
+    background-color: red;
+    color: white;
+}
+
+.sr-only{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+nav{
+    grid-column: 1/-1;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+nav ul{
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+nav a{
+    display: block;
+    background-color: red;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    padding: 15px;
+}
+
+#about-us{
+    padding: 30px 15px 45px;
+}
+
+#menu{
+    padding: 30px 15px 45px;
+}
+
+#game{
+    padding: 30px 15px 45px;
+}
+
+#contact-us{
+    padding: 30px 15px 45px;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    max-width: 1280px;
+    padding: 95px;
+}
+
+body.dark{
+    background-color: red;
+    color: white;
+}
+
+body.dark header{
+    color: white;
+}
+
+body.dark header #changeModes{
+    background-color: white;
+    color: red;
+}
+
+body.dark nav a{
+    background-color: white;
+    color: red;
+}
+
+body.dark .about{
+    color: white;
+}
+
+body.dark #productDisplay{
+    color: white;
+    border: 8px solid white;
+}
+
+body.dark #game div{
+    color: white;
+}
+
+body.dark #gameOutput span{
+    background-color: white;
+    color: red;
+}
+
+body.dark #gameMsg{
+    color: white;
+}
+
+body.dark button{
+    background-color: white;
+    color: red;
+}
+
+body.dark input[type="submit"]{
+    background-color: white;
+    color: red;
+}
+
+body.dark #contact{
+    color: white;
+    border: 8px solid white;
+}
+
+body.dark input[type="text"]{
+    border: 4px solid white;
+}
+
+body.dark input[type="tel"]{
+    border: 4px solid white;
+}
+
+body.dark input[type="email"]{
+    border: 4px solid white;
+}
+
+body.dark fieldset{
+    border-color: white;
+}
+
+body.dark footer{
+    background-color: white;
+    color: red;
+}
+
+.about{
+    text-align: center;
+    color: red;
+}
+
+.restaurant{
+    padding: 50px 60px;
+}
+
+#productDisplay{
+    margin-top: 2rem;
+    color: red;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap: 1rem;
+    border: 8px solid red;
+}
+
+#productDisplay h2{
+    grid-column: 1/-1;
+}
+
+#productDisplay .currentItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.hidden{
+    display: none;
+}
+
+#productDisplay #menuButtons{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    height: fit-content;
+    align-self: center;
+}
+
+#productDisplay button{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#productDisplay img{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+#productDisplay h3{
+    grid-column: 2/-1;
+    align-self: end;
+}
+
+#productDisplay p{
+    grid-column: 2/-1
+}
+
+#productDisplay span{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.feature{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.price{
+    font-style: italic;
+}
+
+#game div{
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    color: red;
+}
+
+#game form{
+    width: 325px;
+    margin: 1rem auto;
+}
+
+#game input{
+    display: inline-block;
+    width: 50px;
+}
+
+#game label{
+    display: inline-block;
+    width: auto;
+}
+
+#gameOutput{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1 fr 1fr;
+    gap: 1rem;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#gameOutput span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    margin: 0.5rem auto;
+}
+
+#gameMsg{
+    font-size: 1.2rem;
+    color: red;
+    text-align: center;
+}
+
+button, input[type="submit"]{
+    display: block;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+#game #guessGame{
+    width: 50%;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#game button{
+    margin: 0 auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+input, label{
+    display: block;
+    font-size: 1rem;
+}
+
+label{
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+input{
+    padding: 0.5rem 0.25rem;
+    margin: 0 auto 1rem auto;
+    width: calc(100% - 1rem);
+}
+
+.message{
+    display: none;
+    color: black;
+    font-size: 1.2em;
+    margin: 0.25em 0;
+    font-weight: bold;
+}
+
+.error{
+    font-size: 1em;
+    display: block;
+}
+
+.errorInput{
+    border: 1px solid black;
+}
+
+#contact{
+    text-align: center;
+    color: red;
+    border: 8px solid red;
+    margin-bottom: 20px;
+}
+
+form{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.required{
+    display: inline-block;
+}
+
+input[type="text"], input[type="tel"], input[type="email"]{
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    background: none;
+    outline: none;
+    border: 4px solid red;
+    line-height: 1;
+    height: 2.5rem;
+}
+
+fieldset{
+    width: 102%;
+    border-color: red;
+    margin: 1rem auto 0.75rem auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#formErrors{
+    color: black;
+}
+
+#mySubmit{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    width: 750px;
+}
+
+footer{
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}

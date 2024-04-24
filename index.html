@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="author" content="Yaseen Elshaigi">
+	    <meta name="description" content="This is my final project for GIT 520">
+        <title>In-N-Out Burger</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" id="skip">Skip to main content</a>
+        <header>
+            <h1>In-N-Out Burger</h1>
+            <button id="changeModes">Light/Dark</button>
+            <nav>
+                <h2 class="sr-only">Main navigation</h2>
+                <ul>
+                    <li id="about-us"><a href=#about-us>About Us</a></li>  
+                    <li id="menu"><a href=#menu>Menu</a></li>  
+                    <li id="game"><a href=#game>Game</a></li>
+                    <li id="contact-us"><a href=#contact>Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="about">
+                <h2>About Us</h2>
+                <img class="restaurant" src="in-n-out-burger.png" alt="In-N-Out Burger restaurant" width="1175" height="700">
+                <p>"We make things the old-fashioned way."</p>
+                <br>
+                <p>In-N-Out Burger is a fast-food restaurant chain where quality is everything.</p>
+                <p>In a world where food is often processed, prepackaged, and frozen, In-N-Out makes it so that quality is the most important ingredient in the restaurant.</p>
+            </div>
+            <section id="productDisplay">
+                <h2>Menu</h2>
+                <section id="menuButtons">
+                    <h3 class="sr-only">Click on a Button to View a Menu Item</h3>
+                    <button id="btn1">Double-Double</button>
+                    <button id="btn2">Cheeseburger</button>
+                    <button id="btn3">Hamburger</button>
+                    <button id="btn4">French Fries</button>
+                </section>
+                <section id="dbDouble" class="currentItem">
+                    <h3>Double-Double</h3>
+                    <img src="double-double.png" alt="In-N-Out Double-Double" width="600px">
+                    <p>
+                        <span class="feature">"Double Meat, Double Cheese"</span>
+                        <span class="desc">Served with two 100% American beef patties and two slices of American cheese</span>
+                        <span class="price">$4.90 (670 cal)</span>
+                    </p>
+                </section>
+                <section id="chBurger" class="hidden">
+                    <h3>Cheeseburger</h3>
+                    <img src="cheeseburger.png" alt="In-N-Out Cheeseburger" width="600px">
+                    <p>
+                        <span class=desc>Served with 100% American beef and one slice of American cheese</span>
+                        <span class="price">$3.50 (480 cal)</span>
+                    </p>
+                </section>
+                <section id="hBurger" class="hidden">
+                    <h3>Hamburger</h3>
+                    <img src="hamburger.png" alt="In-N-Out Hamburger" width="600px">
+                    <p>
+                        <span class="desc">Served with 100% American beef</span>
+                        <span class="price">$3.15 (390 cal)</span>
+                    </p>
+                </section>
+                <section id="fries" class="hidden">
+                    <h3>French Fries</h3>
+                    <img src="fries.png" alt="In-N-Out French Fries" width="600px">
+                    <p>
+                        <span class="desc">Fresh, hand-cut potatoes prepared in 100% sunflower oil</span>
+                        <span class="price">$2.15 (370 cal)</span>
+                    </p>
+                </section>
+            </section>
+            <section id="game">
+                <div>
+                    <h2>What's The Lucky Number?</h2>
+                    <p>We're thinking of a number between 1 and 10. Do you think you're lucky enough to guess what it is?</p>
+                    <form>
+                        <label for="userGuess">Enter a number between 1 and 10:</label>
+                        <span class="message">Please enter a number from 1 and 10</span>
+                        <input type="number" name="userGuess" id="userGuess">
+                        <button id="guessNow">Are You Lucky?</button>
+                    </form>
+                    <section id="gameDisplay">
+                        <h4 class="sr-only">What's the Lucky Number?</h4>
+                        <ul id="gameOutput">
+                            <li id="userNum"><span id="numGuess"></span>Your Number</li>
+                            <li id="luckyNum"><span id="randomNum"></span>Lucky Number</li>
+                        </ul>
+                        <p id="gameMsg"><span id="guessMsg"></span></p>
+                    </section>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Please don't hesitate to contact us by leaving a message down below in our community form. Thank you very much!</p>
+                <form id="accountInfo" target="_blank" method="GET">
+                    <label for="fullName">Full Name:<span class="required">*</span><span class="guide"> (Include both first and last name)</span></label>
+                    <input type="text" name="fullName" id="fullName"><p class="hidden">Missing full name</p>
+                    <label for="phoneNum">Phone Number:<span class="required">*</span></label>
+                    <input type="tel" name="phoneNum" id="phoneNum"><p class="hidden">Invalid or missing phone number</p>
+                    <label for="emailAddr">Email:<span class="required">*</span></label>
+                    <input type="email" name="emailAddr" id="emailAddr"><p class="hidden">Invalid or missing email address</p>
+                    <fieldset>
+                        <legend>How do you prefer to be contacted?</legend>
+                        <label for="phone" class="radio">
+                            <span class="radio_input">
+                                <input type="radio" name="contactMethod" id="phone" value="phone" required checked>
+                                <span class="radio_control"></span>
+                            </span>
+                            <span class="radio_label">Phone</span>
+                        </label>
+                        <label for="email" class="radio">
+                            <span class="radio_input">
+                                <input type="radio" name="contactMethod" id="email" value="email" required>
+                                <span class="radio_control"></span>
+                            </span>
+                            <span class="radio_label">Email</span>
+                        </label>
+                    </fieldset>
+                    <p id="preferredContact" class="hidden"></p>
+                    <label for="message">Message:<span class="required">*</span></label>
+                    <input type="text" name="message" id="message"><p class="hidden">Please enter a message to share with us</p>
+                    <input type="submit" id="mySubmit">
+                </form>
+                <p id="confirm" class="hidden"></p>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <p>Copyright &copy; 2024 Yaseen Elshaigi - GIT519</p>
+        <p>For Educational Purposes Only</p>
+    </footer>
+</html>
